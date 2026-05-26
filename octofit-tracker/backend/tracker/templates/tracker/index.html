@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OctoFit Backend</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f7fbff 0%, #e6f4ff 100%);
+        color: #13324a;
+      }
+
+      .container {
+        max-width: 760px;
+        margin: 48px auto;
+        padding: 28px;
+        background: #ffffff;
+        border: 1px solid #d7e7f5;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(19, 50, 74, 0.08);
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .pill {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #e4f8ec;
+        color: #0f6b37;
+        font-weight: 600;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 6px;
+        background: #f1f6fb;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>{{ name }}</h1>
+      <div class="pill">Status: {{ status }}</div>
+      <p>Backend root route is rendering an HTML template.</p>
+      <p>Available API endpoints:</p>
+      <ul>
+        {% for route in routes %}
+        <li><code>{{ route }}</code></li>
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>
